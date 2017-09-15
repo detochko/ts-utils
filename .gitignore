@@ -1,0 +1,10 @@
+*
+!src/
+!src/**/*
+!tests/
+!tests/**/*
+!*.json
+!*.md
+!.gitignore
+!.npmignore
+!LICENSE
