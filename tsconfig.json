@@ -14,7 +14,7 @@
 		"importHelpers": true,
 		"noEmitHelpers": true,
 		"baseUrl": "./",
-		"outDir": "./dist",
+		"outDir": "./lib",
 		"declaration": true,
 		"lib": [
 			"dom",

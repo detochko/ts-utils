@@ -1,6 +1,6 @@
 *
-!dist/
-!dist/**/*
+!lib/
+!lib/**/*
 !package.json
 !package-lock.json
 !*.md

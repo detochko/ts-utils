@@ -1,15 +1,15 @@
 {
   "name": "detochko-ts-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript common code library",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "clear": "rimraf ./dist",
+    "prepublish": "npm run lint && npm test && npm run build",
+    "clear": "rimraf ./lib",
     "build": "npm run clear && tsc",
     "lint": "tslint -c tslint.json ./src/**/*.ts ./tests/**/*.ts",
-    "tape": "ts-node --no-cache ./node_modules/tape/bin/tape ./tests/**/*.test.ts | tap-dot",
-    "test": "npm run tape"
+    "test": "ts-node --no-cache ./node_modules/tape/bin/tape ./tests/**/*.test.ts | tap-dot"
   },
   "author": "RayMan <detochko@gmail.com>",
   "license": "MIT",
