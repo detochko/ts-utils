@@ -9,3 +9,4 @@ export * from './merge';
 export * from './nothing';
 export * from './spread';
 export * from './storage';
+export * from './hop';

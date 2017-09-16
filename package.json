@@ -1,6 +1,6 @@
 {
   "name": "detochko-ts-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript common code library",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -17,11 +17,14 @@
     "type": "git",
     "url": "https://github.com/detochko/ts-utils.git"
   },
+  "dependencies": {
+    "lodash": "4.17.4",
+    "object-is": "1.0.1"
+  },
   "devDependencies": {
     "@types/lodash": "4.14.74",
     "@types/tape": "4.2.30",
     "detochko-my-own-tslint": "1.0.2",
-    "lodash": "4.17.4",
     "rimraf": "2.6.2",
     "tap-dot": "1.0.5",
     "tape": "4.8.0",

@@ -4,7 +4,7 @@ import { getWindow } from './getWindow';
 
 const cache: {[key: string]: Storage|null} = {};
 
-export const getStorage = (storageName: 'localStorage'|'sessionStorage'): Storage|null => {
+export const getStorage = (storageName: 'localStorage'|'sessionStorage', check: boolean = true): Storage|null => {
 
 	if (storageName in cache) {
 		return cache[storageName];
@@ -20,11 +20,18 @@ export const getStorage = (storageName: 'localStorage'|'sessionStorage'): Storag
 	) {
 		try {
 			const storage: Storage = win[storageName];
-			const key = 'Test/Storage/' + Math.random();
 
-			storage.setItem(key, key);
-			if (key === storage.getItem(key)) {
-				storage.removeItem(key);
+			if (check) {
+				const key = 'Test/Storage/' + Math.random();
+				storage.setItem(key, key);
+				if (key === storage.getItem(key)) {
+					storage.removeItem(key);
+					cache[storageName] = storage;
+					return storage;
+				} else {
+					storage.removeItem(key);
+				}
+			} else {
 				cache[storageName] = storage;
 				return storage;
 			}
