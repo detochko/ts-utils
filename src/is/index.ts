@@ -1,6 +1,7 @@
 
 export { isEqual } from './isEqual';
 export { isSame, isSamePolyfill } from './isSame';
+export { isPromiseLike } from './isPromiseLike';
 
 // tslint:disable:no-var-requires variable-name
 const _isBoolean = require('lodash/isBoolean');

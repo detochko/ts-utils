@@ -10,3 +10,4 @@ export * from './nothing';
 export * from './spread';
 export * from './storage';
 export * from './hop';
+export * from './noop';
