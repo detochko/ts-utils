@@ -1,7 +1,7 @@
 
 import * as test from 'tape';
 
-import { nulls } from '../mocks';
+import { nulls } from '../mocks/nulls';
 import { isSame, isSamePolyfill } from '../../src/is';
 
 const trueTest = (isSameFunc: typeof isSame, t: any) => {

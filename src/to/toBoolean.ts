@@ -3,6 +3,11 @@ import { isBoolean, isString } from '../is';
 
 import { toLowerCase } from './toLowerCase';
 
+/**
+ * @param {any} value
+ * @param {boolean} [spec] = false
+ * @returns {boolean}
+ */
 export const toBoolean = (value: any, spec: boolean = false): boolean => {
 	if (isBoolean(value)) {
 		return value;

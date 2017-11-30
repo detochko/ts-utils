@@ -1,7 +1,7 @@
 
 import * as test from 'tape';
 
-import { nulls } from '../mocks';
+import { nulls } from '../mocks/nulls';
 
 import { noop } from '../../src/noop';
 import { isPromiseLike } from '../../src/is/isPromiseLike';

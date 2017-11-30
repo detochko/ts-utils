@@ -1,7 +1,7 @@
 
 import * as test from 'tape';
 
-import { nulls } from './mocks';
+import { nulls } from './mocks/nulls';
 import { hop } from '../src/hop';
 
 const a = {a: 1, b: 2, c: 3};

@@ -2,11 +2,17 @@
 import { isSame } from './isSame';
 import { hop } from '../hop';
 
-export interface IIsEqualObjectProp {
+export interface IEqualObjectProp {
 	[key: string]: any;
 }
 
-export const isEqual = (a: IIsEqualObjectProp, b: IIsEqualObjectProp, deep: boolean = false): boolean => {
+/**
+ * @param {object} a
+ * @param {object} b
+ * @param {boolean} [deep] = false
+ * @returns {boolean}
+ */
+export const isEqual = (a: IEqualObjectProp, b: IEqualObjectProp, deep: boolean = false): boolean => {
 
 	if (isSame(a, b)) {
 		return true;

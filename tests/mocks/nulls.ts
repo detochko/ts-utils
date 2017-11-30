@@ -8,3 +8,5 @@ export const nulls = (cb: (item: any) => any): any => [
 	-0,
 	NaN
 ].forEach(cb);
+
+export default nulls;

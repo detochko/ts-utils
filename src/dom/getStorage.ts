@@ -1,10 +1,29 @@
 
-import { isStorage } from '../is';
+import { isStorage } from './isStorage';
 import { getWindow } from './getWindow';
 
 const cache: {[key: string]: Storage|null} = {};
 
-export const getStorage = (storageName: 'localStorage'|'sessionStorage', check: boolean = true): Storage|null => {
+type IStorageName = 'localStorage'|'sessionStorage';
+
+/**
+ * @param {any} value
+ * @returns {boolean}
+ */
+const isStorageName = (value: any): value is IStorageName => {
+	return 'localStorage' === value || 'sessionStorage' === value;
+};
+
+/**
+ * @param {string} storageName
+ * @param {boolean} [check] = true
+ * @returns {Storage|null}
+ */
+export const getStorage = (storageName: IStorageName, check: boolean = true): Storage|null => {
+
+	if (!isStorageName(storageName)) {
+		return null;
+	}
 
 	if (storageName in cache) {
 		return cache[storageName];
